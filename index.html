@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEMPERATURE CONVERTOR</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js"></script>
+</head>
+<body>
+    <div class="T-convertor">
+        <h1>Temperature Convertor</h1>
+        <p>Fahrenheit to Celcius</p>
+        <h2>Type a value in Fahrenheit to convert the value in Celcius:</h2>
+    </div>
+    <div class="hero-image">
+        <div class="hero-text">
+            <p><label for="Fahrenheit">Fahrenheit</label>
+                <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+            </p>
+            <p>Celcius: <span id="outputCelcius"></span></p>
+        </div>
+    </div>
+    <script>
+       function temperatureConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+}
+    </script>
+</body>
+</html>
